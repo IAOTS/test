@@ -803,7 +803,7 @@ function send_handle() {
         let name = prompt("Enter The Password:"); // name won't be null, but it may be falsey, so here
         // we check if the name is falsey:
         if (name == "Hanan") {
-            parent.location = 'index1.html/#quiz-container';
+            parent.location = 'index1.html/title';
 
         } else {
             parent.location = 'index.html';

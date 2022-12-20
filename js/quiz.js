@@ -795,7 +795,7 @@ function send_handle() {
 
         }
     }
-
+/*
    window.addEventListener('DOMContentLoaded', (e) => {
         // assign the name via the prompt() interface, and
         // declare both variables (rather than accidentally
@@ -810,4 +810,4 @@ function send_handle() {
 
         }
         // I wouldn't recommend alert, but I left this unchanged:
-    });
+    });*/

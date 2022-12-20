@@ -624,9 +624,7 @@ function displayQuestion() {
 function calcScore(e) {
     if (e.innerHTML === questionBank[i].answer && score < questionBank.length) {
         score = score + 1;
-        document.getElementById(e.id).style.background = 'limegreen';
-    } else {
-        document.getElementById(e.id).style.background = 'tomato';
+ 
     }
     setTimeout(nextQuestion, 300);
 }

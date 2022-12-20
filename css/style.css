@@ -33,7 +33,7 @@ body {
 .info_box,
 .quiz_box,
 .result_box {
-    color: #fffك
+    color: #fff;
     background-color: #3aafa9;
     direction: rtl;
     position: absolute;
@@ -163,7 +163,7 @@ body {
         position: absolute;
         background-color: #33908b;
         width: 80%;
-        top: 100%;
+        top: 90%;
         left: 50%;
         margin-top: 100px;
         margin-bottom: 110px;

@@ -693,7 +693,8 @@ next.addEventListener('click', nextQuestion);
 
 //Back to Quiz button event
 function backToQuiz() {
-    location.reload();
+                parent.location = 'index.html';
+
 }
 
 //function to check Answers
@@ -747,7 +748,7 @@ function send_handle() {
         if (name == "") {
             msg1.innerHTML = "لا يمكنك ترك الاسم فارغا";
         } else {
-            var win = open(`https://wa.me/${num}?text=I%27m ${name}%20The code of exam is : IAOTS %20${msg}`, '_blank');
+            var win = open(`https://wa.me/${num}?text=I%27m ${name}%20The code of exam is : IAOTS_%20${msg}`, '_blank');
             // win.focus();
         }}
 

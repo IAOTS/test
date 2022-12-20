@@ -127,7 +127,7 @@ body {
 
 @media screen and (min-width:350px) {
    .title {
-        margin-top: 100px;
+        margin-top: 50px;
         margin-bottom: 100px;
         font-size: 2rem;
         font-weight: bold;
@@ -146,7 +146,7 @@ body {
         position: absolute;
         background-color: #33908b;
         width: 80%;
-        top: 60%;
+        top: 70%;
         left: 50%;
         margin-top: 50px;
         margin-bottom: 100px;

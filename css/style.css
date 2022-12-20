@@ -126,13 +126,17 @@ body {
 }
 
 @media screen and (min-width:350px) {
-    .title {
-        margin-top: 50px;
+   .title {
+        margin-top: 100px;
         margin-bottom: 100px;
         font-size: 2rem;
         font-weight: bold;
         text-align: center;
         color: #007bff;
+    }
+    .title img {
+        width: 50px;
+        height: 50px;
     }
     .start_btn,
     .info_box,

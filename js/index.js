@@ -1,7 +1,7 @@
        var btn = document.getElementById("btn");
        btn.onclick = function() {
 
-           parent.location = 'quiz.html';
+           parent.location = 'index1.html';
        }
        var note = document.getElementById("TestNotes");
        note.onclick = function() {

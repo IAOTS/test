@@ -159,10 +159,11 @@ button:active {
 #scoreboard,
 #answerBank {
     width: 20rem;
-    background: #004696;
+    background: #1458a6;
     padding: 2rem;
     text-align: center;
     margin: auto;
+    color:#fff;
         border: 1px solid #eee;
     position: relative;
     border-radius: .5rem;
@@ -177,7 +178,7 @@ button:active {
 #scoreboard #msg1 {
     direction: rtl;
     margin-top: 10px;
-    color: red;
+    color: #fff;
     font-weight: bold;
     font-size: large;
 }

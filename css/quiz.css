@@ -159,7 +159,7 @@ button:active {
 #scoreboard,
 #answerBank {
     width: 20rem;
-    background: rgba(230, 230, 250, 0.77);
+    background: #004696;
     padding: 2rem;
     text-align: center;
     margin: auto;

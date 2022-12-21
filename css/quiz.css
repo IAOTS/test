@@ -163,8 +163,9 @@ button:active {
     padding: 2rem;
     text-align: center;
     margin: auto;
-        border: 1px solid black;
+        border: 1px solid #eee;
     position: relative;
+    border-radius: .5rem;
     top: 5rem;
     display: none;
 }

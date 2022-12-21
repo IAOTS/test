@@ -3,75 +3,127 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Placement Test</title>
-
-    <!-- css file link -->
-    <link rel="stylesheet" href="css/quiz.css">
+    <title>Welcome</title>
+    <style>
+        #notes {
+            color: #fff;
+            background-color: #3aafa9;
+            direction: rtl;
+            position: absolute;
+            width: 30%;
+            margin-top: 50px;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 4px 8px 0 rgba(0, 0, 0, 0.19);
+            transition: all 0.2s ease;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+        }
+        
+        button {
+            color: #fff;
+            background-color: #3aafa9;
+            direction: rtl;
+            position: absolute;
+            width: 10%;
+            height: 50px;
+            margin-top: 50px;
+            top: 80%;
+            border: 1px solid black;
+            left: 50%;
+            border-radius: 10px;
+            transform: translate(-50%, -50%);
+            box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 4px 8px 0 rgba(0, 0, 0, 0.19);
+            transition: all 0.2s ease;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+        }
+        
+        h3 {
+            color: #007bff;
+            text-align: center;
+            margin-top: 100px;
+            direction: rtl;
+        }
+        
+        @media screen and (min-width:350px) {
+            #notes {
+                direction: rtl;
+                position: absolute;
+                background-color: #33908b;
+                width: 80%;
+                top: 40%;
+                left: 50%;
+                margin-top: 50px;
+                margin-bottom: 110px;
+                margin-top: 10%;
+                transform: translate(-50%, -50%);
+                color: #fff;
+                background-color: #33908b;
+                margin-bottom: 120%;
+            }
+            #notes video {
+                margin: 10px;
+                display: flex;
+                width: 200px;
+                height: 200px;
+                margin-right: 15%;
+            }
+            h3 {
+                color: #007bff;
+                text-align: center;
+                margin-top: 50px;
+                direction: rtl;
+            }
+            button {
+                color: #fff;
+                background-color: #3aafa9;
+                direction: rtl;
+                position: absolute;
+                width: 30%;
+                height: 50px;
+                margin-top: 50px;
+                top: 70%;
+                border: 1px solid black;
+                left: 50%;
+                border-radius: 10px;
+                transform: translate(-50%, -50%);
+                box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 4px 8px 0 rgba(0, 0, 0, 0.19);
+                transition: all 0.2s ease;
+                -webkit-transform: translate(-50%, -50%);
+                -moz-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                -o-transform: translate(-50%, -50%);
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- <img src="logo.png" alt="img" id="img" class="img"> -->
-    <h1 id="title" style="background-color: #004696;">Placement Test </h1>
-    <h2 id="user"></h2>
-    <button id="close">إغلاق</button>
+    <h3>من فضـــلك شاهد هذا الفيديو قبل الدخول على الإختبار.</h3>
+    <div id="notes">
 
-    <div class="count">
-        <div id="timer"></div>
+        <video width="320" height="240" controls>
+                <source src="video/mobizen_20221220_125726.mp4" type="video/mp4">
+                <source src="video/mobizen_20221220_125726.mp4" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
     </div>
-    <iframe src="demo_iframe.htm" class="iframe" name="iframe_a" title="Iframe Example"></iframe>
-    <!-- quiz-container -->
-    <div id="quiz-container">
-        <!-- question container -->
-        <div class="questions">
-            <p id="main"></p>
-            <p id="desc"></p>
-            <p>
-                <a href="audios.html" target="iframe_a" id="song"></a>
-            </p>
-            <h2 id="question"></h2>
-            <ol type="A">
-                <li class="option"><span id="option0" onclick="calcScore(this)"></span></li>
-                <li class="option"><span id="option1" onclick="calcScore(this)"></span></li>
-                <li class="option"><span id="option2" onclick="calcScore(this)"></span></li>
-                <li class="option"><span id="option3" onclick="calcScore(this)"></span></li>
-            </ol>
-            <h4 id="stat"></h4>
-        </div>
+    <button id="btn">Go To Exam</button>
+    <script>
+        var btn = document.getElementById("btn");
+        btn.onclick = function() {
 
-        <div class="buttons">
-            <button type="button" class="previous">Previous</button>
-
-            <button type="button" class="next">Next</button>
-        </div>
-    </div>
-    <!-- scoreboard section -->
-    <div id="scoreboard">
-        <img src="images/logo.png" alt="">
-        <h2 id="score-title">You Have Done</h2>
-        <h2 id="score" hidden></h2>
-        <h2 id="level" hidden>hi</h2>
-        <form action="" id="myForm">
-            <input id="number" type="numric" hidden value="779288403" placeholder="phone 966506666666">
-            <input id="name" type="text" placeholder="ادخل اسمك الكامل هنا">
-            <input id="msg" type="text" placeholder="type msg" hidden>
-            <button onclick="send_handle()" class="saveBtn">send</button>
-        </form>
-        <p id="msg1" style="direction: rtl;"></p>
-        <button type="button" id="score-btn" onclick="backToQuiz()">Back to Quiz</button>
-        <!-- <button type="button" id="check-answer" onclick="checkAnswer()">Check Answers</button> -->
-    </div>
-    <!-- answers section -->
-    <div id="answerBank">
-        <h2>Answers :</h2>
-        <ol type="1" id="answers">
-
-        </ol>
-        <button type="button" id="score-btn" onclick="backToQuiz()">Back to Quiz</button>
-    </div>
-
-    <!-- javascript file source -->
-    <script src="js/quiz.js"></script>
+            parent.location = 'index.html';
+        }
+    </script>
 </body>
 
 </html>

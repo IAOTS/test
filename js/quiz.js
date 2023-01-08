@@ -766,6 +766,7 @@ function previousQuestion() {
             listen10.style.display = 'none';
             listen9.style.display = 'block';
         } else if (i <= 18 && i <= 21) {
+                            listen9.style.display = 'none';
             listen10.style.display = 'block';
         }
         displayQuestion();

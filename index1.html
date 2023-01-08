@@ -13,59 +13,127 @@
 <body>
     <!-- <img src="logo.png" alt="img" id="img" class="img"> -->
     <p id="title">Placement Test </p>
-        <img src="logo.png" alt="" class="mainLogo">
+    <img src="images/logo.png" alt="" class="mainLogo">
 
     <button id="close">إغلاق</button>
 
     <div class="count">
         <div id="timer"></div>
     </div>
-    <iframe src="demo_iframe.htm" class="iframe" name="iframe_a" title="Iframe Example"></iframe>
     <!-- quiz-container -->
     <div id="quiz-container">
         <!-- question container -->
         <div class="questions">
             <p id="main"></p>
             <p id="desc"></p>
-            <p>
-                <a href="audios.html" target="iframe_a" id="song"></a>
-            </p>
-            <h2 id="question"></h2>
-            <ol type="A">
-                <li class="option"><span id="option0" onclick="calcScore(this)"></span></li>
-                <li class="option"><span id="option1" onclick="calcScore(this)"></span></li>
-                <li class="option"><span id="option2" onclick="calcScore(this)"></span></li>
-                <li class="option"><span id="option3" onclick="calcScore(this)"></span></li>
-            </ol>
-            <h4 id="stat"></h4>
+
+            <div>
+                <div id="listen1">
+                    <audio controls>
+
+                            <source src="audios/1.mpeg" type="audio/mpeg" id="song">
+                        </audio>
+
+                </div>
+                <div hidden id="listen2">
+                    <audio controls>
+
+                            <source src="audios/2.mpeg" type="audio/mpeg" id="song">
+                        </audio>
+
+                </div>
+                <div hidden id="listen3">
+                    <audio controls>
+
+                            <source src="audios/3.mpeg" type="audio/mpeg" id="song">
+                        </audio>
+
+                </div>
+                <div hidden id="listen4">
+                    <audio controls>
+
+                            <source src="audios/4.mpeg" type="audio/mpeg" id="song">
+                        </audio>
+
+                </div>
+                <div hidden id="listen5">
+                    <audio controls>
+
+                            <source src="audios/5.mpeg" type="audio/mpeg" id="song">
+                        </audio>
+
+                </div>
+                <div hidden id="listen6">
+                    <audio controls>
+
+                            <source src="audios/6.mpeg" type="audio/mpeg" id="song">
+                        </audio>
+
+                </div>
+                <div hidden id="listen7">
+                    <audio controls>
+
+                            <source src="audios/7.mpeg" type="audio/mpeg" id="song">
+                        </audio>
+
+                </div>
+                <div hidden id="listen8">
+                    <audio controls>
+
+                            <source src="audios/8.mpeg" type="audio/mpeg" id="song">
+                        </audio>
+
+                </div>
+                <div hidden id="listen9">
+                    <audio controls>
+
+                            <source src="audios/9.mpeg" type="audio/mpeg" id="song">
+                        </audio>
+
+                </div>
+                <div hidden id="listen10">
+                    <audio controls>
+
+                            <source src="audios/10.mpeg" type="audio/mpeg" id="song">
+                        </audio>
+
+                </div>
+                <h2 id="question"></h2>
+                <ol type="A">
+                    <li class="option"><span id="option0" onclick="calcScore(this)"></span></li>
+                    <li class="option"><span id="option1" onclick="calcScore(this)"></span></li>
+                    <li class="option"><span id="option2" onclick="calcScore(this)"></span></li>
+                    <li class="option"><span id="option3" onclick="calcScore(this)"></span></li>
+                </ol>
+                <h4 id="stat"></h4>
+            </div>
+
+            <div class="buttons">
+                <button type="button" class="previous">Previous</button>
+
+                <button type="button" class="next">Next</button>
+            </div>
         </div>
-
-        <div class="buttons">
-            <button type="button" class="previous">Previous</button>
-
-            <button type="button" class="next">Next</button>
+        <!-- scoreboard section -->
+        <div id="scoreboard">
+            <img src="logo.png" alt="" width="120px" height="120px">
+            <h2 id="score-title">You Have Done</h2>
+            <h2 id="score" hidden></h2>
+            <h2 id="level" hidden>hi</h2>
+            <form action="" id="myForm">
+                <input id="number" type="numric" hidden value="779288403" placeholder="phone 966506666666">
+                <input id="name" type="text" dir="rtl" class="contact__input" placeholder="ادخل اسمك الكامل هنا">
+                <input id="msg" type="text" placeholder="type msg" hidden>
+                <button onclick="send_handle()" class="saveBtn">إرسال</button>
+            </form>
+            <p id="msg1" style="direction: rtl;"></p>
+            <!-- <button type="button" id="check-answer" onclick="checkAnswer()">Check Answers</button> -->
         </div>
-    </div>
-    <!-- scoreboard section -->
-    <div id="scoreboard">
-        <img src="logo.png" alt="" width="120px" height="120px">
-        <h2 id="score-title">You Have Done</h2>
-        <h2 id="score" hidden></h2>
-        <h2 id="level" hidden>hi</h2>
-        <form action="" id="myForm">
-            <input id="number" type="numric" hidden value="779288403" placeholder="phone 966506666666">
-   <input id="name" type="text" dir="rtl" class="contact__input" placeholder="ادخل اسمك الكامل هنا">            
-            <input id="msg" type="text" placeholder="type msg" hidden>
-            <button onclick="send_handle()" class="saveBtn">إرسال</button>
-        </form>
-        <p id="msg1" style="direction: rtl;"></p>
-        <!-- <button type="button" id="check-answer" onclick="checkAnswer()">Check Answers</button> -->
-    </div>
-    <!-- answers section -->
-   
+        <!-- answers section -->
 
-    <!-- javascript file source -->
-    <script src="js/quiz.js"></script>
+
+        <!-- javascript file source -->
+        <script src="js/quiz.js"></script>
 </body>
 
 </html>

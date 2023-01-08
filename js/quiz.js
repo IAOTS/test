@@ -591,7 +591,6 @@ var quizContainer = document.getElementById('quiz-container');
 var scorecard = document.getElementById('scorecard');
 var main = document.getElementById('main');
 var desc = document.getElementById('desc');
-var audio = document.getElementById('song');
 var option0 = document.getElementById('option0');
 var option1 = document.getElementById('option1');
 var option2 = document.getElementById('option2');
@@ -601,6 +600,19 @@ var previous = document.querySelector('.previous');
 var points = document.getElementById('score');
 var level = document.getElementById('level');
 var span = document.querySelectorAll('span');
+var listen1 = document.getElementById('listen1');
+var listen2 = document.getElementById('listen2');
+var listen3 = document.getElementById('listen3');
+var listen4 = document.getElementById('listen4');
+var listen5 = document.getElementById('listen5');
+var listen6 = document.getElementById('listen6');
+var listen7 = document.getElementById('listen7');
+var listen8 = document.getElementById('listen8');
+var listen9 = document.getElementById('listen9');
+var listen10 = document.getElementById('listen10');
+var audio = document.querySelector('source');
+
+
 var i = 0;
 var score = 0;
 
@@ -609,10 +621,44 @@ function displayQuestion() {
     for (var a = 0; a < span.length; a++) {
         span[a].style.background = 'none';
     }
+
     main.innerHTML = '' + questionBank[i].main;
     desc.innerHTML = '' + questionBank[i].desc;
     audio.innerHTML = '' + questionBank[i].audio;
     question.innerHTML = 'Q.' + (i + 0) + ' ' + questionBank[i].question;
+    if (i === 1) {
+        listen1.style.display = 'none';
+        listen2.style.display = 'block';
+
+    } else if (i === 2) {
+        listen2.style.display = 'none';
+        listen3.style.display = 'block';
+    } else if (i === 3) {
+        listen3.style.display = 'none';
+        listen4.style.display = 'block';
+
+    } else if (i === 4) {
+        listen4.style.display = 'none';
+        listen5.style.display = 'block';
+    } else if (i === 6) {
+        listen5.style.display = 'none';
+        listen6.style.display = 'block';
+    } else if (i === 8) {
+        listen6.style.display = 'none';
+        listen7.style.display = 'block';
+    } else if (i === 10) {
+        listen7.style.display = 'none';
+        listen8.style.display = 'block';
+    } else if (i === 13) {
+        listen8.style.display = 'none';
+        listen9.style.display = 'block';
+    } else if (i === 17) {
+        listen9.style.display = 'none';
+        listen10.style.display = 'block';
+    } else if (i === 21) {
+        listen10.style.display = 'none';
+    }
+
     option0.innerHTML = questionBank[i].option[0];
     option1.innerHTML = questionBank[i].option[1];
     option2.innerHTML = questionBank[i].option[2];
@@ -624,7 +670,7 @@ function displayQuestion() {
 function calcScore(e) {
     if (e.innerHTML === questionBank[i].answer && score < questionBank.length) {
         score = score + 1;
- 
+
     }
     setTimeout(nextQuestion, 300);
 }
@@ -643,37 +689,37 @@ function nextQuestion() {
         level.innerHTML = "ITEI,FH";
 
     } else if (score >= 6 && score <= 11) {
-                    level.innerHTML = "ITEI,SH";
+        level.innerHTML = "ITEI,SH";
 
 
     } else if (score >= 12 && score <= 17) {
-                    level.innerHTML = "ITEL1,FH";
+        level.innerHTML = "ITEL1,FH";
     } else if (score >= 18 && score <= 23) {
-                                level.innerHTML = "ITEL1,SH";
+        level.innerHTML = "ITEL1,SH";
 
     } else if (score >= 24 && score <= 30) {
-                                level.innerHTML = "ITEL2,FH";
+        level.innerHTML = "ITEL2,FH";
 
     } else if (score >= 31 && score <= 36) {
-                                            level.innerHTML = "ITEL2,SH";
+        level.innerHTML = "ITEL2,SH";
 
     } else if (score >= 37 && score <= 42) {
-                                            level.innerHTML = "ITEL3,FH";
+        level.innerHTML = "ITEL3,FH";
 
     } else if (score >= 43 && score <= 49) {
-                                            level.innerHTML = "ITEL3,SH";
+        level.innerHTML = "ITEL3,SH";
 
     } else if (score >= 50 && score <= 55) {
-                                            level.innerHTML = "PL1,FH";
+        level.innerHTML = "PL1,FH";
 
     } else if (score >= 56 && score <= 61) {
-                                                        level.innerHTML = "PL1,SH";
+        level.innerHTML = "PL1,SH";
 
     } else if (score >= 62 && score <= 68) {
-                                                        level.innerHTML = "PL2,FH";
+        level.innerHTML = "PL2,FH";
 
     } else if (score >= 69 && score <= 70) {
-                                                        level.innerHTML = "PL2,SH";
+        level.innerHTML = "PL2,SH";
         level.innerHTML = "Passages Level 2, second half";
 
     }
@@ -683,6 +729,45 @@ function nextQuestion() {
 function previousQuestion() {
     if (i <= questionBank.length - 1) {
         i = i - 1;
+        if (i <= 1) {
+            listen1.style.display = 'block';
+            listen2.style.display = 'none';
+            listen3.style.display = 'none';
+
+        } else if (i <= 2) {
+            listen3.style.display = 'none';
+            listen2.style.display = 'block';
+            listen4.style.display = 'none';
+
+        } else if (i <= 3) {
+            listen4.style.display = 'none';
+            listen3.style.display = 'block';
+            listen5.style.display = 'none';
+
+        } else if (i <= 4 && i <= 5) {
+            listen5.style.display = 'none';
+            listen4.style.display = 'block';
+            listen6.style.display = 'none';
+            listen6.style.display = 'none';
+
+        } else if (i <= 6) {
+            listen6.style.display = 'none';
+            listen5.style.display = 'block';
+        } else if (i <= 7 && i <= 8) {
+            listen7.style.display = 'none';
+            listen6.style.display = 'block';
+        } else if (i <= 9 && i <= 10) {
+            listen8.style.display = 'none';
+            listen7.style.display = 'block';
+        } else if (i <= 12 && i <= 13) {
+            listen9.style.display = 'none';
+            listen8.style.display = 'block';
+        } else if (i <= 14 && i <= 17) {
+            listen10.style.display = 'none';
+            listen9.style.display = 'block';
+        } else if (i <= 18 && i <= 21) {
+            listen10.style.display = 'block';
+        }
         displayQuestion();
     }
 }
@@ -693,7 +778,7 @@ next.addEventListener('click', nextQuestion);
 
 //Back to Quiz button event
 function backToQuiz() {
-                parent.location = 'index.html';
+    parent.location = 'index.html';
 
 }
 
@@ -740,60 +825,61 @@ btn.onclick = function() {
 
 function send_handle() {
 
-        let num = document.getElementById("number").value;
-        let msg = document.getElementById("msg").value;
-        let msg1 = document.getElementById("msg1");
-        msg = level.innerHTML;
-        let name = document.getElementById("name").value;
-        if (name == "") {
-            msg1.innerHTML = "لا يمكنك ترك الاسم فارغا";
-        } else {
-            var win = open(`https://wa.me/${num}?text=I%27m ${name}%20The code of exam is : IAOTS_%20${msg}`, '_blank');
-            // win.focus();
-        }}
-
-    window.onbeforeunload = function() {
-        return "Dude, are you sure you want to leave? Think of the kittens!";
+    let num = document.getElementById("number").value;
+    let msg = document.getElementById("msg").value;
+    let msg1 = document.getElementById("msg1");
+    msg = level.innerHTML;
+    let name = document.getElementById("name").value;
+    if (name == "") {
+        msg1.innerHTML = "لا يمكنك ترك الاسم فارغا";
+    } else {
+        var win = open(`https://wa.me/${num}?text=I%27m ${name}%20The code of exam is : IAOTS_%20${msg}`, '_blank');
+        // win.focus();
     }
-    var sec = 3600,
-        countDiv = document.getElementById("timer"),
-        secpass,
-        countDown = setInterval(function() {
-            'use strict';
+}
 
-            secpass();
-        }, 1000);
-
-    function secpass() {
+window.onbeforeunload = function() {
+    return "Dude, are you sure you want to leave? Think of the kittens!";
+}
+var sec = 3600,
+    countDiv = document.getElementById("timer"),
+    secpass,
+    countDown = setInterval(function() {
         'use strict';
 
-        var min = Math.floor(sec / 60),
-            remSec = sec % 60;
+        secpass();
+    }, 1000);
 
-        if (remSec < 10) {
+function secpass() {
+    'use strict';
 
-            remSec = '0' + remSec;
+    var min = Math.floor(sec / 60),
+        remSec = sec % 60;
 
-        }
-        if (min < 10) {
+    if (remSec < 10) {
 
-            min = '0' + min;
+        remSec = '0' + remSec;
 
-        }
-        countDiv.innerHTML = min + ":" + remSec;
-
-        if (sec > 0) {
-
-            sec = sec - 1;
-
-        } else {
-
-            clearInterval(countDown);
-
-            countDiv.innerHTML = 'countdown done';
-
-        }
     }
+    if (min < 10) {
+
+        min = '0' + min;
+
+    }
+    countDiv.innerHTML = min + ":" + remSec;
+
+    if (sec > 0) {
+
+        sec = sec - 1;
+
+    } else {
+
+        clearInterval(countDown);
+
+        countDiv.innerHTML = 'countdown done';
+
+    }
+}
 /*
    window.addEventListener('DOMContentLoaded', (e) => {
         // assign the name via the prompt() interface, and

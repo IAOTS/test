@@ -588,7 +588,7 @@ var questionBank = [{
 
 var question = document.getElementById('question');
 var quizContainer = document.getElementById('quiz-container');
-var scorecard = document.getElementById('scorecard');
+var scorecard = document.getElementById('scoreboard');
 var main = document.getElementById('main');
 var desc = document.getElementById('desc');
 var option0 = document.getElementById('option0');
